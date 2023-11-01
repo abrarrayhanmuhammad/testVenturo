@@ -65,7 +65,7 @@
                         <thead>
                             <tr class="table-dark">
                                 <th rowspan="2" style="text-align:center;vertical-align: middle;width: 250px;">Menu</th>
-                                <th colspan="12" style="text-align: center;">Periode Pada 2021
+                                <th colspan="12" style="text-align: center;">Periode Pada $tahun
                                 </th>
                                 <th rowspan="2" style="text-align:center;vertical-align: middle;width:75px">Total</th>
                             </tr>
@@ -101,7 +101,7 @@
                                             @endif
                                         @endforeach
                                         <?php $total += $subtotal?>
-                                        <td class="text-end">{{ number_format($subtotal) }}</td>
+                                        <td class="text-end">{{ ($subtotal > 0) ? $subtotal : '' }}</td>
                                     @endfor
                                     <td style="text-align: right;"><b>{{ number_format($total) }}</b></td>
                                 </tr>
@@ -123,7 +123,7 @@
                                         @endif
                                     @endforeach
                                     <?php $total += $subtotal?>
-                                    <td class="text-end">{{ number_format($subtotal) }}</td>
+                                    <td class="text-end">{{ ($subtotal > 0) ? $subtotal : '' }}</td>
                                 @endfor
                                 <td style="text-align: right;"><b>{{ number_format($total) }}</b></td>
                             </tr>
@@ -140,7 +140,7 @@
                                             @endif
                                         @endforeach
                                         <?php $total += $subtotal?>
-                                        <td class="text-end">{{ number_format($subtotal) }}</td>
+                                        <td class="text-end">{{ ($subtotal > 0) ? $subtotal : '' }}</td>
                                     @endfor
                                     <td style="text-align: right;"><b>{{ number_format($total) }}</b></td>
                             </tr>
